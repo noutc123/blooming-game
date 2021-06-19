@@ -5,8 +5,17 @@
 # Created by: PyQt5 UI code generator 5.10.1
 #
 # WARNING! All changes made in this file will be lost!
-
+import icons
+import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtGui import *
+from PyQt5.QtCore import *
+from PyQt5.QtWidgets import *
+from PyQt5.uic import loadUi
+
+from bloogui import *
+
+from Ui_fonction import *
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -83,12 +92,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3.setSpacing(0)
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.layoutWidget.raise_()
-        self.EXIT.clicked.connect(self.sauvegarder())
-        #function de sauvegarde
-        def safeguard(self):
-
-            self.EXIT.clicked.connect()
-
+        self.EXIT.clicked.connect(app.quit)
         self.pushButton_11.raise_()
         self.horizontalLayout.addWidget(self.frame_top)
         self.verticalLayout.addWidget(self.top_bar)
@@ -160,6 +164,10 @@ class Ui_MainWindow(object):
         item.setBackground(QtGui.QColor(32, 74, 135))
         self.tableWidget.setHorizontalHeaderItem(0, item)
         self.gridLayout.addWidget(self.tableWidget, 1, 0, 3, 1)
+        self.tableWidget.setAutoScroll(True)
+        #MODIFICATION IF THE WIDTH OF TABLE WIDGET 1
+        self.tableWidget.setHorizontalScrollBarPolicy(Qt.ScrollBarAsNeeded);
+
         self.label_6 = QtWidgets.QLabel(self.layoutWidget1)
         self.label_6.setObjectName("label_6")
         self.gridLayout.addWidget(self.label_6, 2, 2, 1, 2)
@@ -168,7 +176,7 @@ class Ui_MainWindow(object):
         self.TOTAL_EXPENSE.setObjectName("TOTAL_EXPENSE")
         self.gridLayout.addWidget(self.TOTAL_EXPENSE, 2, 4, 1, 1)
         self.passiv_income = QtWidgets.QProgressBar(self.layoutWidget1)
-        self.passiv_income.setProperty("value", 24)
+        self.passiv_income.setProperty("value", 74)
         self.passiv_income.setObjectName("passiv_income")
         self.gridLayout.addWidget(self.passiv_income, 3, 2, 1, 3)
         self.label = QtWidgets.QLabel(self.layoutWidget1)
@@ -446,6 +454,13 @@ class Ui_MainWindow(object):
         self.stackedWidget_3.setCurrentIndex(1)
         self.pushButton_7.clicked.connect(self.label_13.clear)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        """"
+        self.tableWidget.setColumnWidth(0, 150)
+        self.tableWidget.setColumnWidth(1, 150)
+        self.tableWidget_2.setColumnWidth(0, 150)
+        self.tableWidget_2.setColumnWidth(1, 150)
+        self.tableWidget_3.setColumnWidth(0, 150)
+        self.tableWidget_3.setColumnWidth(1, 150)"""
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -510,8 +525,45 @@ class Ui_MainWindow(object):
         self.pushButton_8.setText(_translate("MainWindow", "Repay"))
         self.information.setText(_translate("MainWindow", "avant de lancer  verifier votre fiche de finance et regarde si tu peux utiliser ce temp pour rembourser ou preter a la bank "))
         self.pushButton_10.setText(_translate("MainWindow", "Roll"))
+        self.btn_toggle.clicked.connect(lambda: Ui_function.toggleMenu(self, 650, True))
 
-import icons
+        def gottobloogui(self):
+            Window = Mainwindow()
+            widget.addWidget(Window)
+            widget.setCurrentIndex(widget.currentIndex() + 1)
+
+class Ui_function(Mainwindow):
+    """docstring for Ui_function"""
+
+    def toggleMenu(self, maxWidth, enable):
+        self.tableWidget.setColumnWidth(0, 150)
+        self.tableWidget.setColumnWidth(1, 150)
+        self.tableWidget_2.setColumnWidth(0, 150)
+        self.tableWidget_2.setColumnWidth(1, 150)
+        self.tableWidget_3.setColumnWidth(0, 150)
+        self.tableWidget_3.setColumnWidth(1, 150)
+        if enable:
+            print('hekko wor')
+            # get width
+            width = self.frame_left_menu.width()
+            maxExtend = maxWidth
+            standard = 1
+            # set Mac Width
+            if width == 1:
+                widthExtended = maxExtend
+            else:
+                widthExtended = standard
+
+            # ANIMATION
+            self.animation = QPropertyAnimation(self.frame_left_menu, b"minimumWidth")
+            self.animation.setDuration(400)
+            self.animation.setStartValue(width)
+            self.animation.setEndValue(widthExtended)
+            self.animation.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
+            self.animation.start()
+
+        pass
+
 
 if __name__ == "__main__":
     import sys
