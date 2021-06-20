@@ -2,6 +2,7 @@
   <qresource prefix="icons">
     <file>images.jpeg</file>
     <file>icons/activity.svg</file>
+    <file>board/hqdefault.jpg</file>
     <file>icons/airplay.svg</file>
     <file>icons/alert-circle.svg</file>
     <file>icons/alert-octagon.svg</file>

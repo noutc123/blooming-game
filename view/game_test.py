@@ -5,17 +5,8 @@
 # Created by: PyQt5 UI code generator 5.10.1
 #
 # WARNING! All changes made in this file will be lost!
-import icons
-import sys
+
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtGui import *
-from PyQt5.QtCore import *
-from PyQt5.QtWidgets import *
-from PyQt5.uic import loadUi
-
-from bloogui import *
-
-from Ui_fonction import *
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -68,7 +59,7 @@ class Ui_MainWindow(object):
         self.frame_top.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_top.setObjectName("frame_top")
         self.EXIT = QtWidgets.QPushButton(self.frame_top)
-        self.EXIT.setGeometry(QtCore.QRect(1000, 0, 40, 40))
+        self.EXIT.setGeometry(QtCore.QRect(1030, 0, 40, 40))
         self.EXIT.setMaximumSize(QtCore.QSize(40, 40))
         self.EXIT.setStyleSheet("border:0px solid")
         self.EXIT.setText("")
@@ -92,7 +83,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3.setSpacing(0)
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.layoutWidget.raise_()
-        self.EXIT.clicked.connect(app.quit)
+        self.EXIT.raise_()
         self.pushButton_11.raise_()
         self.horizontalLayout.addWidget(self.frame_top)
         self.verticalLayout.addWidget(self.top_bar)
@@ -107,7 +98,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.frame_left_menu = QtWidgets.QFrame(self.content)
         self.frame_left_menu.setMaximumSize(QtCore.QSize(1, 16777215))
-        self.frame_left_menu.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 178, 102, 0), stop:1 rgba(255, 178, 102, 0));")
+        self.frame_left_menu.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 178, 102, 100), stop:1 rgba(255, 178, 102, 100));")
         self.frame_left_menu.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.frame_left_menu.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_left_menu.setObjectName("frame_left_menu")
@@ -116,14 +107,14 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.setSpacing(0)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.frame_top_menus = QtWidgets.QFrame(self.frame_left_menu)
-        self.frame_top_menus.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 178, 102, 0), stop:1 rgba(255, 178, 102, 0));")
+        self.frame_top_menus.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 178, 102, 100), stop:1 rgba(255, 178, 102, 100));")
         self.frame_top_menus.setObjectName("frame_top_menus")
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.frame_top_menus)
         self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_3.setSpacing(0)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
         self.widget = QtWidgets.QWidget(self.frame_top_menus)
-        self.widget.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 178, 102, 166), stop:1 rgba(255, 178, 102, 166));")
+        self.widget.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 178, 102, 100), stop:1 rgba(255, 178, 102, 100));")
         self.widget.setObjectName("widget")
         self.layoutWidget1 = QtWidgets.QWidget(self.widget)
         self.layoutWidget1.setGeometry(QtCore.QRect(0, 10, 611, 721))
@@ -164,10 +155,6 @@ class Ui_MainWindow(object):
         item.setBackground(QtGui.QColor(32, 74, 135))
         self.tableWidget.setHorizontalHeaderItem(0, item)
         self.gridLayout.addWidget(self.tableWidget, 1, 0, 3, 1)
-        self.tableWidget.setAutoScroll(True)
-        #MODIFICATION IF THE WIDTH OF TABLE WIDGET 1
-        self.tableWidget.setHorizontalScrollBarPolicy(Qt.ScrollBarAsNeeded);
-
         self.label_6 = QtWidgets.QLabel(self.layoutWidget1)
         self.label_6.setObjectName("label_6")
         self.gridLayout.addWidget(self.label_6, 2, 2, 1, 2)
@@ -176,7 +163,7 @@ class Ui_MainWindow(object):
         self.TOTAL_EXPENSE.setObjectName("TOTAL_EXPENSE")
         self.gridLayout.addWidget(self.TOTAL_EXPENSE, 2, 4, 1, 1)
         self.passiv_income = QtWidgets.QProgressBar(self.layoutWidget1)
-        self.passiv_income.setProperty("value", 74)
+        self.passiv_income.setProperty("value", 24)
         self.passiv_income.setObjectName("passiv_income")
         self.gridLayout.addWidget(self.passiv_income, 3, 2, 1, 3)
         self.label = QtWidgets.QLabel(self.layoutWidget1)
@@ -300,29 +287,34 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.addWidget(self.frame_top_menus)
         self.horizontalLayout_2.addWidget(self.frame_left_menu)
         self.frame_pages = QtWidgets.QFrame(self.content)
-        self.frame_pages.setStyleSheet("background-color: rgb(244, 164, 96);")
+        self.frame_pages.setStyleSheet("QFrame#frame_pages{\n"
+"border-image: url(:/icons/images.jpeg);\n"
+"}")
         self.frame_pages.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.frame_pages.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_pages.setObjectName("frame_pages")
         self.boardgame = QtWidgets.QLabel(self.frame_pages)
         self.boardgame.setGeometry(QtCore.QRect(80, 50, 961, 591))
-        self.boardgame.setStyleSheet("border-image: url(:/board/board/61ZO+Gk4MGL._AC_SY350_.jpg);")
+        self.boardgame.setStyleSheet("border-image: url(:/icons/board/hqdefault.jpg);\n"
+"\n"
+"border-radius:20px;")
         self.boardgame.setText("")
         self.boardgame.setObjectName("boardgame")
         self.label_15 = QtWidgets.QLabel(self.frame_pages)
-        self.label_15.setGeometry(QtCore.QRect(800, 30, 321, 531))
+        self.label_15.setGeometry(QtCore.QRect(800, 30, 321, 471))
         self.label_15.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0.487562, y1:0.045, x2:0.493, y2:0.045, stop:0 rgba(117, 80, 123, 196), stop:1 rgba(117, 80, 123, 174));")
         self.label_15.setText("")
         self.label_15.setObjectName("label_15")
         self.stackedWidget = QtWidgets.QStackedWidget(self.frame_pages)
-        self.stackedWidget.setGeometry(QtCore.QRect(800, 30, 321, 531))
-        self.stackedWidget.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0.487562, y1:0.045, x2:0.493, y2:0.045, stop:0 rgba(117, 80, 123, 196), stop:1 rgba(117, 80, 123, 174));")
+        self.stackedWidget.setGeometry(QtCore.QRect(800, 30, 321, 481))
+        self.stackedWidget.setStyleSheet("\n"
+"border-radius:20px;")
         self.stackedWidget.setObjectName("stackedWidget")
         self.page_8 = QtWidgets.QWidget()
         self.page_8.setObjectName("page_8")
         self.stackedWidget_3 = QtWidgets.QStackedWidget(self.page_8)
-        self.stackedWidget_3.setGeometry(QtCore.QRect(0, 0, 321, 461))
-        self.stackedWidget_3.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0.487562, y1:0.045, x2:0.493, y2:0.045, stop:0 rgba(222, 184, 135, 229), stop:1 rgba(222, 184, 135, 232));")
+        self.stackedWidget_3.setGeometry(QtCore.QRect(0, -10, 321, 461))
+        self.stackedWidget_3.setStyleSheet("background-color: rgba(222, 184, 135, 232);")
         self.stackedWidget_3.setFrameShadow(QtWidgets.QFrame.Plain)
         self.stackedWidget_3.setObjectName("stackedWidget_3")
         self.page_9 = QtWidgets.QWidget()
@@ -331,28 +323,21 @@ class Ui_MainWindow(object):
         self.page_10 = QtWidgets.QWidget()
         self.page_10.setObjectName("page_10")
         self.frame_3 = QtWidgets.QFrame(self.page_10)
-        self.frame_3.setGeometry(QtCore.QRect(0, 88, 301, 231))
+        self.frame_3.setGeometry(QtCore.QRect(10, 90, 301, 371))
         self.frame_3.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_3.setObjectName("frame_3")
-        self.dream_Description_2 = QtWidgets.QLabel(self.frame_3)
-        self.dream_Description_2.setGeometry(QtCore.QRect(10, 40, 281, 111))
-        self.dream_Description_2.setStyleSheet("background-color: rgb(222, 184, 135);")
-        self.dream_Description_2.setText("")
-        self.dream_Description_2.setObjectName("dream_Description_2")
-        self.Profession_info_2 = QtWidgets.QLabel(self.frame_3)
-        self.Profession_info_2.setGeometry(QtCore.QRect(6, 196, 291, 161))
-        self.Profession_info_2.setText("")
-        self.Profession_info_2.setObjectName("Profession_info_2")
         self.title = QtWidgets.QLabel(self.frame_3)
-        self.title.setGeometry(QtCore.QRect(20, 0, 261, 20))
+        self.title.setGeometry(QtCore.QRect(20, 60, 261, 20))
         self.title.setStyleSheet("font: 57 bold 13pt \"Ubuntu\";\n"
 "color: rgb(117, 80, 123);")
         self.title.setObjectName("title")
-        self.image_Dream_2 = QtWidgets.QLabel(self.page_10)
-        self.image_Dream_2.setGeometry(QtCore.QRect(86, 20, 131, 61))
-        self.image_Dream_2.setText("")
-        self.image_Dream_2.setObjectName("image_Dream_2")
+        self.dream_Description_2 = QtWidgets.QLabel(self.frame_3)
+        self.dream_Description_2.setGeometry(QtCore.QRect(10, 50, 281, 121))
+        self.dream_Description_2.setStyleSheet("background-color: rgba(222, 184, 135, 0);")
+        self.dream_Description_2.setObjectName("dream_Description_2")
+        self.dream_Description_2.raise_()
+        self.title.raise_()
         self.btn_prev_1 = QtWidgets.QPushButton(self.page_10)
         self.btn_prev_1.setGeometry(QtCore.QRect(40, 40, 20, 20))
         self.btn_prev_1.setMaximumSize(QtCore.QSize(20, 20))
@@ -376,38 +361,49 @@ class Ui_MainWindow(object):
         self.btn_next_2.setIconSize(QtCore.QSize(20, 20))
         self.btn_next_2.setAutoRepeat(False)
         self.btn_next_2.setObjectName("btn_next_2")
+        self.image_Dream_2 = QtWidgets.QLabel(self.page_10)
+        self.image_Dream_2.setGeometry(QtCore.QRect(80, 20, 131, 61))
+        self.image_Dream_2.setStyleSheet("border-image: url(:/board/rolling-dices.svg);")
+        self.image_Dream_2.setText("")
+        self.image_Dream_2.setObjectName("image_Dream_2")
+        self.Profession_info_2 = QtWidgets.QLabel(self.page_10)
+        self.Profession_info_2.setGeometry(QtCore.QRect(20, 290, 291, 151))
+        self.Profession_info_2.setStyleSheet("background-color: rgb(238, 238, 236);")
+        self.Profession_info_2.setText("")
+        self.Profession_info_2.setObjectName("Profession_info_2")
         self.stackedWidget_3.addWidget(self.page_10)
-        self.pushButton_4 = QtWidgets.QPushButton(self.page_8)
-        self.pushButton_4.setGeometry(QtCore.QRect(20, 480, 89, 25))
-        self.pushButton_4.setStyleSheet("background-color: rgb(222, 184, 135);\n"
+        self.choose = QtWidgets.QPushButton(self.page_8)
+        self.choose.setGeometry(QtCore.QRect(40, 460, 89, 25))
+        self.choose.setStyleSheet("background-color: rgb(222, 184, 135);\n"
 "color: rgb(117, 80, 123);")
-        self.pushButton_4.setObjectName("pushButton_4")
+        self.choose.setObjectName("choose")
         self.stackedWidget.addWidget(self.page_8)
         self.page_11 = QtWidgets.QWidget()
         self.page_11.setObjectName("page_11")
-        self.pushButton_7 = QtWidgets.QPushButton(self.page_11)
-        self.pushButton_7.setGeometry(QtCore.QRect(10, 490, 101, 25))
-        self.pushButton_7.setStyleSheet("background-color: rgb(222, 184, 135);\n"
+        self.Roll = QtWidgets.QPushButton(self.page_11)
+        self.Roll.setGeometry(QtCore.QRect(10, 440, 101, 25))
+        self.Roll.setStyleSheet("background-color: rgb(222, 184, 135);\n"
 "color: rgb(117, 80, 123);")
-        self.pushButton_7.setObjectName("pushButton_7")
+        self.Roll.setObjectName("Roll")
         self.frame_5 = QtWidgets.QFrame(self.page_11)
-        self.frame_5.setGeometry(QtCore.QRect(0, 50, 321, 381))
+        self.frame_5.setGeometry(QtCore.QRect(0, 0, 321, 431))
+        self.frame_5.setStyleSheet("background-color: rgba(222, 184, 135, 229);\n"
+"border-radius:200px;")
         self.frame_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_5.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_5.setObjectName("frame_5")
         self.pushButton_9 = QtWidgets.QPushButton(self.frame_5)
         self.pushButton_9.setGeometry(QtCore.QRect(190, 340, 101, 25))
-        self.pushButton_9.setStyleSheet("background-color: rgb(252, 233, 79);")
+        self.pushButton_9.setStyleSheet("background-color: rgb(252, 233, 79);\n"
+"border-radius:2000px;")
         self.pushButton_9.setObjectName("pushButton_9")
         self.pushButton_8 = QtWidgets.QPushButton(self.frame_5)
         self.pushButton_8.setGeometry(QtCore.QRect(10, 340, 101, 25))
-        self.pushButton_8.setStyleSheet("background-color: rgb(252, 233, 79);")
+        self.pushButton_8.setStyleSheet("background-color: rgb(252, 233, 79);\n"
+"\n"
+"border-radius:15px;\n"
+"")
         self.pushButton_8.setObjectName("pushButton_8")
-        self.label_13 = QtWidgets.QLabel(self.frame_5)
-        self.label_13.setGeometry(QtCore.QRect(0, -60, 319, 441))
-        self.label_13.setStyleSheet("background-color: rgba(222, 184, 135, 229);")
-        self.label_13.setText("")
-        self.label_13.setObjectName("label_13")
         self.frame_8 = QtWidgets.QFrame(self.frame_5)
         self.frame_8.setGeometry(QtCore.QRect(10, 90, 301, 221))
         self.frame_8.setStyleSheet("background-color: rgb(222, 184, 135);")
@@ -424,20 +420,25 @@ class Ui_MainWindow(object):
         self.dice_rolling.setGeometry(QtCore.QRect(10, 80, 261, 131))
         self.dice_rolling.setStyleSheet("border-image: url(:/board/board/tenor.gif);\n"
 "border-image: url(:/board/board/animated-dice-image-0094.gif);\n"
-"")
+"border-radius:20px;")
         self.dice_rolling.setText("")
         self.dice_rolling.setWordWrap(False)
         self.dice_rolling.setTextInteractionFlags(QtCore.Qt.NoTextInteraction)
         self.dice_rolling.setObjectName("dice_rolling")
+        self.label_13 = QtWidgets.QLabel(self.frame_8)
+        self.label_13.setGeometry(QtCore.QRect(-10, -100, 319, 441))
+        self.label_13.setStyleSheet("background-color: rgba(222, 184, 135, 229);")
+        self.label_13.setText("")
+        self.label_13.setObjectName("label_13")
+        self.label_13.raise_()
+        self.information.raise_()
+        self.dice_rolling.raise_()
         self.dice_image = QtWidgets.QLabel(self.frame_5)
         self.dice_image.setGeometry(QtCore.QRect(80, 20, 121, 61))
+        self.dice_image.setStyleSheet("border-image: url(:/board/rolling-dices.svg);\n"
+"border-radius:20px;")
         self.dice_image.setText("")
         self.dice_image.setObjectName("dice_image")
-        self.label_13.raise_()
-        self.pushButton_9.raise_()
-        self.pushButton_8.raise_()
-        self.frame_8.raise_()
-        self.dice_image.raise_()
         self.stackedWidget.addWidget(self.page_11)
         self.page_12 = QtWidgets.QWidget()
         self.page_12.setObjectName("page_12")
@@ -445,22 +446,73 @@ class Ui_MainWindow(object):
         self.pushButton_10.setGeometry(QtCore.QRect(30, 330, 89, 25))
         self.pushButton_10.setObjectName("pushButton_10")
         self.stackedWidget.addWidget(self.page_12)
+        self.player = QtWidgets.QPushButton(self.frame_pages)
+        self.player.setGeometry(QtCore.QRect(320, 490, 16, 16))
+        self.player.setStyleSheet("border-radius:200px;\n"
+"background-color: rgb(114, 159, 207);")
+        self.player.setText("")
+        self.player.setObjectName("player")
+        self.label_4 = QtWidgets.QLabel(self.frame_pages)
+        self.label_4.setGeometry(QtCore.QRect(866, 646, 271, 71))
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu Condensed")
+        font.setBold(True)
+        font.setItalic(True)
+        font.setWeight(75)
+        self.label_4.setFont(font)
+        self.label_4.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"border-radius:30px;")
+        self.label_4.setAlignment(QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
+        self.label_4.setObjectName("label_4")
+        self.label_11 = QtWidgets.QLabel(self.frame_pages)
+        self.label_11.setGeometry(QtCore.QRect(880, 660, 251, 41))
+        self.label_11.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"border-radius:30px;")
+        self.label_11.setObjectName("label_11")
         self.horizontalLayout_2.addWidget(self.frame_pages)
+        self.frame_pages.raise_()
+        self.frame_left_menu.raise_()
         self.verticalLayout.addWidget(self.content)
         MainWindow.setCentralWidget(self.centralwidget)
-
+        self.frame = QtWidgets.QFrame(self.stackedWidget)
+        self.frame.setGeometry(QtCore.QRect(1090,100,321,491))
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(1)
         self.stackedWidget_3.setCurrentIndex(1)
-        self.pushButton_7.clicked.connect(self.label_13.clear)
+        #self.Roll.clicked.connect(self.label_13.clear)
+        self.choose.clicked.connect(self.start_game)
+        self.Roll.clicked.connect(self.start_game)
+        self.position = 0
+        self.btn_next_2.clicked.connect(self.dream_Description_2.clear)
+        self.btn_prev_1.clicked.connect(self.dream_Description_2.clear)
+        self.btn_toggle.clicked.connect(self.btn_toggle.animateClick)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
-        """"
-        self.tableWidget.setColumnWidth(0, 150)
-        self.tableWidget.setColumnWidth(1, 150)
-        self.tableWidget_2.setColumnWidth(0, 150)
-        self.tableWidget_2.setColumnWidth(1, 150)
-        self.tableWidget_3.setColumnWidth(0, 150)
-        self.tableWidget_3.setColumnWidth(1, 150)"""
+    def start_game(self):
+
+        list_race = [(400,440,16,16),(380,400,16,16),(370,360,16,16),(360,310,16,16),
+                 (370,270,16,16),(400,230,16,16),(430,190,16,16),(480,180,16,16),(520,160,16,16),
+                 (570,170,16,16),(620,180,16,16),(660,200,16,16),(700,230,16,16),(720,270,16,16),(740,310,16,16),(740,360,16,16),(720,400,16,16),
+                 (700,440,16,16),(660,470,16,16),(620,490,16,16),(570,500,16,16),(530,510,16,16),(480,490,16,16),(440,470,16,16)]
+        list_race1 = [(120, 580, 16, 16), (110, 520, 16, 16), (110, 460, 16, 16), (110, 400, 16, 16),
+                     (110, 330, 16, 16), (110, 280, 16, 16), (110, 220, 16, 16), (110, 160, 16, 16),
+                      (130, 100, 16, 16),
+                     (190, 90, 16, 16), (260, 90, 16, 16), (330, 90, 16, 16), (400, 90, 16, 16), (470, 90, 16, 16),
+                     (540, 90, 16, 16), (610, 90, 16, 16), (680, 90, 16, 16),
+                     (750, 90, 16, 16), (830, 90, 16, 16), (910, 90, 16, 16), (980, 90, 16, 16),
+                      (980, 150, 16, 16),
+                     (980, 220, 16, 16), (980, 280, 16, 16), (980, 340, 16, 16), (980, 400, 16, 16)
+                      , (980, 460, 16, 16), (980, 520, 16, 16), (980, 580, 16, 16), (910, 580, 16, 16)
+                , (830,580, 16, 16), (750, 580, 16, 16), (680, 580, 16, 16), (610, 580, 16, 16),
+                      (540,580, 16, 16),(470,580, 16, 16),(400,580, 16, 16),(330,580, 16, 16),
+                      (260,580, 16, 16),(190,580, 16, 16),(190,580, 16, 16)
+                      ]
+
+        self.player.setGeometry(QtCore.QRect(list_race1[self.position][0], list_race1[self.position][1],list_race1[self.position][2], list_race1[self.position][3]))
+        if self.position < len(list_race1) -1 :
+                print(self.position,len(list_race1) -1)
+                self.position +=1
+        else:
+                self.position = 0
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -519,51 +571,17 @@ class Ui_MainWindow(object):
         self.TOTAL_INCOME.setText(_translate("MainWindow", "$"))
         self.CASH.setText(_translate("MainWindow", "$"))
         self.title.setText(_translate("MainWindow", "Player  choose your DREAM"))
-        self.pushButton_4.setText(_translate("MainWindow", "CHOOSE"))
-        self.pushButton_7.setText(_translate("MainWindow", "Roll"))
+        self.dream_Description_2.setText(_translate("MainWindow", "tu na pas de reve"))
+        self.choose.setText(_translate("MainWindow", "CHOOSE"))
+        self.Roll.setText(_translate("MainWindow", "Roll"))
         self.pushButton_9.setText(_translate("MainWindow", "Borrow"))
         self.pushButton_8.setText(_translate("MainWindow", "Repay"))
         self.information.setText(_translate("MainWindow", "avant de lancer  verifier votre fiche de finance et regarde si tu peux utiliser ce temp pour rembourser ou preter a la bank "))
         self.pushButton_10.setText(_translate("MainWindow", "Roll"))
-        self.btn_toggle.clicked.connect(lambda: Ui_function.toggleMenu(self, 650, True))
+        self.label_4.setText(_translate("MainWindow", "CHAT LOG"))
+        self.label_11.setText(_translate("MainWindow", "PLAYER STAR  GAME"))
 
-        def gottobloogui(self):
-            Window = Mainwindow()
-            widget.addWidget(Window)
-            widget.setCurrentIndex(widget.currentIndex() + 1)
-
-class Ui_function(Mainwindow):
-    """docstring for Ui_function"""
-
-    def toggleMenu(self, maxWidth, enable):
-        self.tableWidget.setColumnWidth(0, 150)
-        self.tableWidget.setColumnWidth(1, 150)
-        self.tableWidget_2.setColumnWidth(0, 150)
-        self.tableWidget_2.setColumnWidth(1, 150)
-        self.tableWidget_3.setColumnWidth(0, 150)
-        self.tableWidget_3.setColumnWidth(1, 150)
-        if enable:
-            print('hekko wor')
-            # get width
-            width = self.frame_left_menu.width()
-            maxExtend = maxWidth
-            standard = 1
-            # set Mac Width
-            if width == 1:
-                widthExtended = maxExtend
-            else:
-                widthExtended = standard
-
-            # ANIMATION
-            self.animation = QPropertyAnimation(self.frame_left_menu, b"minimumWidth")
-            self.animation.setDuration(400)
-            self.animation.setStartValue(width)
-            self.animation.setEndValue(widthExtended)
-            self.animation.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
-            self.animation.start()
-
-        pass
-
+import icons
 
 if __name__ == "__main__":
     import sys

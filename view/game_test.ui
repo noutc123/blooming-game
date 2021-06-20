@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1179</width>
-    <height>704</height>
+    <width>1141</width>
+    <height>754</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -141,7 +141,7 @@
          <widget class="QPushButton" name="EXIT">
           <property name="geometry">
            <rect>
-            <x>1000</x>
+            <x>1030</x>
             <y>0</y>
             <width>40</width>
             <height>40</height>
@@ -252,7 +252,7 @@ background-color: rgb(114, 159, 207);</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 178, 102, 0), stop:1 rgba(255, 178, 102, 0));</string>
+          <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 178, 102, 100), stop:1 rgba(255, 178, 102, 100));</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::NoFrame</enum>
@@ -279,7 +279,7 @@ background-color: rgb(114, 159, 207);</string>
           <item>
            <widget class="QFrame" name="frame_top_menus">
             <property name="styleSheet">
-             <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 178, 102, 0), stop:1 rgba(255, 178, 102, 0));</string>
+             <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 178, 102, 100), stop:1 rgba(255, 178, 102, 100));</string>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_3">
              <property name="spacing">
@@ -300,7 +300,7 @@ background-color: rgb(114, 159, 207);</string>
              <item>
               <widget class="QWidget" name="widget" native="true">
                <property name="styleSheet">
-                <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 178, 102, 0), stop:1 rgba(255, 178, 102, 0));</string>
+                <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 178, 102, 100), stop:1 rgba(255, 178, 102, 100));</string>
                </property>
                <widget class="QWidget" name="layoutWidget">
                 <property name="geometry">
@@ -690,7 +690,9 @@ border-image: url(:/icons/images.jpeg);
            </rect>
           </property>
           <property name="styleSheet">
-           <string notr="true">border-image: url(:/board/board/61ZO+Gk4MGL._AC_SY350_.jpg);</string>
+           <string notr="true">border-image: url(:/icons/board/hqdefault.jpg);
+
+border-radius:20px;</string>
           </property>
           <property name="text">
            <string/>
@@ -702,7 +704,7 @@ border-image: url(:/icons/images.jpeg);
             <x>800</x>
             <y>30</y>
             <width>321</width>
-            <height>531</height>
+            <height>471</height>
            </rect>
           </property>
           <property name="styleSheet">
@@ -718,11 +720,12 @@ border-image: url(:/icons/images.jpeg);
             <x>800</x>
             <y>30</y>
             <width>321</width>
-            <height>531</height>
+            <height>481</height>
            </rect>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.487562, y1:0.045, x2:0.493, y2:0.045, stop:0 rgba(117, 80, 123, 196), stop:1 rgba(117, 80, 123, 174));</string>
+           <string notr="true">
+border-radius:20px;</string>
           </property>
           <property name="currentIndex">
            <number>1</number>
@@ -732,13 +735,13 @@ border-image: url(:/icons/images.jpeg);
             <property name="geometry">
              <rect>
               <x>0</x>
-              <y>0</y>
+              <y>-10</y>
               <width>321</width>
               <height>461</height>
              </rect>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-color: qlineargradient(spread:pad, x1:0.487562, y1:0.045, x2:0.493, y2:0.045, stop:0 rgba(222, 184, 135, 229), stop:1 rgba(222, 184, 135, 232));</string>
+             <string notr="true">background-color: rgba(222, 184, 135, 232);</string>
             </property>
             <property name="frameShadow">
              <enum>QFrame::Plain</enum>
@@ -751,10 +754,10 @@ border-image: url(:/icons/images.jpeg);
              <widget class="QFrame" name="frame_3">
               <property name="geometry">
                <rect>
-                <x>0</x>
-                <y>88</y>
+                <x>10</x>
+                <y>90</y>
                 <width>301</width>
-                <height>231</height>
+                <height>371</height>
                </rect>
               </property>
               <property name="frameShape">
@@ -763,40 +766,11 @@ border-image: url(:/icons/images.jpeg);
               <property name="frameShadow">
                <enum>QFrame::Raised</enum>
               </property>
-              <widget class="QLabel" name="dream_Description_2">
-               <property name="geometry">
-                <rect>
-                 <x>10</x>
-                 <y>40</y>
-                 <width>281</width>
-                 <height>111</height>
-                </rect>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">background-color: rgb(222, 184, 135);</string>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-              </widget>
-              <widget class="QLabel" name="Profession_info_2">
-               <property name="geometry">
-                <rect>
-                 <x>6</x>
-                 <y>196</y>
-                 <width>291</width>
-                 <height>161</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-              </widget>
               <widget class="QLabel" name="title">
                <property name="geometry">
                 <rect>
                  <x>20</x>
-                 <y>0</y>
+                 <y>60</y>
                  <width>261</width>
                  <height>20</height>
                 </rect>
@@ -809,6 +783,24 @@ color: rgb(117, 80, 123);</string>
                 <string>Player  choose your DREAM</string>
                </property>
               </widget>
+              <widget class="QLabel" name="dream_Description_2">
+               <property name="geometry">
+                <rect>
+                 <x>10</x>
+                 <y>50</y>
+                 <width>281</width>
+                 <height>121</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgba(222, 184, 135, 0);</string>
+               </property>
+               <property name="text">
+                <string>tu na pas de reve</string>
+               </property>
+              </widget>
+              <zorder>dream_Description_2</zorder>
+              <zorder>title</zorder>
              </widget>
              <widget class="QPushButton" name="btn_prev_1">
               <property name="geometry">
@@ -895,13 +887,29 @@ color: rgb(117, 80, 123);</string>
                <string/>
               </property>
              </widget>
+             <widget class="QLabel" name="Profession_info_2">
+              <property name="geometry">
+               <rect>
+                <x>20</x>
+                <y>290</y>
+                <width>291</width>
+                <height>151</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(238, 238, 236);</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
             </widget>
            </widget>
-           <widget class="QPushButton" name="pushButton_4">
+           <widget class="QPushButton" name="choose">
             <property name="geometry">
              <rect>
-              <x>20</x>
-              <y>480</y>
+              <x>40</x>
+              <y>460</y>
               <width>89</width>
               <height>25</height>
              </rect>
@@ -920,7 +928,7 @@ color: rgb(117, 80, 123);</string>
             <property name="geometry">
              <rect>
               <x>10</x>
-              <y>490</y>
+              <y>440</y>
               <width>101</width>
               <height>25</height>
              </rect>
@@ -937,10 +945,14 @@ color: rgb(117, 80, 123);</string>
             <property name="geometry">
              <rect>
               <x>0</x>
-              <y>50</y>
+              <y>0</y>
               <width>321</width>
-              <height>381</height>
+              <height>431</height>
              </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(222, 184, 135, 229);
+border-radius:200px;</string>
             </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
@@ -958,7 +970,8 @@ color: rgb(117, 80, 123);</string>
               </rect>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color: rgb(252, 233, 79);</string>
+              <string notr="true">background-color: rgb(252, 233, 79);
+border-radius:2000px;</string>
              </property>
              <property name="text">
               <string>Borrow</string>
@@ -974,26 +987,13 @@ color: rgb(117, 80, 123);</string>
               </rect>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color: rgb(252, 233, 79);</string>
+              <string notr="true">background-color: rgb(252, 233, 79);
+
+border-radius:15px;
+</string>
              </property>
              <property name="text">
               <string>Repay</string>
-             </property>
-            </widget>
-            <widget class="QLabel" name="label_13">
-             <property name="geometry">
-              <rect>
-               <x>0</x>
-               <y>-60</y>
-               <width>319</width>
-               <height>441</height>
-              </rect>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgba(222, 184, 135, 229);</string>
-             </property>
-             <property name="text">
-              <string/>
              </property>
             </widget>
             <widget class="QFrame" name="frame_8">
@@ -1048,7 +1048,7 @@ color: rgb(117, 80, 123);</string>
               <property name="styleSheet">
                <string notr="true">border-image: url(:/board/board/tenor.gif);
 border-image: url(:/board/board/animated-dice-image-0094.gif);
-</string>
+border-radius:20px;</string>
               </property>
               <property name="text">
                <string/>
@@ -1060,6 +1060,25 @@ border-image: url(:/board/board/animated-dice-image-0094.gif);
                <set>Qt::NoTextInteraction</set>
               </property>
              </widget>
+             <widget class="QLabel" name="label_13">
+              <property name="geometry">
+               <rect>
+                <x>-10</x>
+                <y>-100</y>
+                <width>319</width>
+                <height>441</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: rgba(222, 184, 135, 229);</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+             <zorder>label_13</zorder>
+             <zorder>information</zorder>
+             <zorder>dice_rolling</zorder>
             </widget>
             <widget class="QLabel" name="dice_image">
              <property name="geometry">
@@ -1071,17 +1090,13 @@ border-image: url(:/board/board/animated-dice-image-0094.gif);
               </rect>
              </property>
              <property name="styleSheet">
-              <string notr="true">border-image: url(:/board/rolling-dices.svg);</string>
+              <string notr="true">border-image: url(:/board/rolling-dices.svg);
+border-radius:20px;</string>
              </property>
              <property name="text">
               <string/>
              </property>
             </widget>
-            <zorder>label_13</zorder>
-            <zorder>pushButton_9</zorder>
-            <zorder>pushButton_8</zorder>
-            <zorder>frame_8</zorder>
-            <zorder>dice_image</zorder>
            </widget>
           </widget>
           <widget class="QWidget" name="page_12">
@@ -1100,12 +1115,12 @@ border-image: url(:/board/board/animated-dice-image-0094.gif);
            </widget>
           </widget>
          </widget>
-         <widget class="QPushButton" name="pushButton_12">
+         <widget class="QPushButton" name="player">
           <property name="geometry">
            <rect>
-            <x>450</x>
-            <y>390</y>
-            <width>16</width>
+            <x>330</x>
+            <y>480</y>
+            <width>21</width>
             <height>16</height>
            </rect>
           </property>
@@ -1115,6 +1130,51 @@ background-color: rgb(114, 159, 207);</string>
           </property>
           <property name="text">
            <string/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_4">
+          <property name="geometry">
+           <rect>
+            <x>866</x>
+            <y>646</y>
+            <width>271</width>
+            <height>71</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Ubuntu Condensed</family>
+            <weight>75</weight>
+            <italic>true</italic>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);
+border-radius:30px;</string>
+          </property>
+          <property name="text">
+           <string>CHAT LOG</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignHCenter|Qt::AlignTop</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_11">
+          <property name="geometry">
+           <rect>
+            <x>880</x>
+            <y>660</y>
+            <width>251</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);
+border-radius:30px;</string>
+          </property>
+          <property name="text">
+           <string>PLAYER STAR  GAME</string>
           </property>
          </widget>
         </widget>
@@ -1139,11 +1199,75 @@ background-color: rgb(114, 159, 207);</string>
    <hints>
     <hint type="sourcelabel">
      <x>883</x>
-     <y>560</y>
+     <y>510</y>
     </hint>
     <hint type="destinationlabel">
      <x>1106</x>
      <y>387</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>choose</sender>
+   <signal>clicked()</signal>
+   <receiver>Profession_info_2</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>873</x>
+     <y>537</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>975</x>
+     <y>453</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_next_2</sender>
+   <signal>clicked()</signal>
+   <receiver>dream_Description_2</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1043</x>
+     <y>108</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1070</x>
+     <y>264</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_prev_1</sender>
+   <signal>clicked()</signal>
+   <receiver>dream_Description_2</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>848</x>
+     <y>119</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>848</x>
+     <y>235</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_toggle</sender>
+   <signal>clicked()</signal>
+   <receiver>btn_toggle</receiver>
+   <slot>animateClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>42</x>
+     <y>21</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>44</x>
+     <y>32</y>
     </hint>
    </hints>
   </connection>

@@ -17,7 +17,7 @@ class Data_save:
         self._donnees.append(donnees)
 
     def save_data(self):
-        self._donnees = self.load_data()
+        self._donnees.extend( self.load_data())
         with open(self._name, "wb") as fichier:
             record = pickle.Pickler(fichier)
             record.dump(self._donnees)
