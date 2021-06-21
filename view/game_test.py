@@ -499,7 +499,7 @@ class Ui_MainWindow(object):
 
     def onload(self):
         play =Player("hello buy dream ",'native')
-        """
+
         self.tableWidget.setColumnWidth(0, 150)
         self.tableWidget.setColumnWidth(1, 150)
         self.tableWidget_2.setColumnWidth(0, 150)
@@ -509,7 +509,7 @@ class Ui_MainWindow(object):
         self.tableWidget_4.setColumnWidth(0, 150)
         self.tableWidget_4.setColumnWidth(1, 150)
         player=[]
-        """
+        
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
