@@ -1,4 +1,4 @@
-import model.Profession
+from model.Profession import Profession
 import model.FinancialStatement
 from model.FinancialStatement import *
 
@@ -15,9 +15,8 @@ class Player:
     def __init__(self, name: str, dream):
         self._name = name
         self._dream = dream
-        p = model.Profession.Profession.getProfession()
-        self.prof = p
-        self._fs = FinancialStatement(p)
+        self.prof = Profession.getProfession()
+        self._fs = FinancialStatement(self.prof)
 
         # position et information de la carte
         self._hasWon = False

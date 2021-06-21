@@ -81,9 +81,8 @@ class FinancialStatement:
 
     def update(self):
         self._income = self._salary + self._REcashFlow
-        self._totalExpenses = self._taxes + self._homeMortgagePayment + self._schoolLoanPayment + self._carLoanPayment + self._creditCardPayment + self._otherExpenses + (
-                    self._perChildExpense * self._numChildren)
-        self._assets = self.getOwnedREValue() + self.getStockValue() + self._savings
+        self._totalExpenses = self._taxes + self._homeMortgagePayment + self._schoolLoanPayment + self._carLoanPayment + self._creditCardPayment + self._otherExpenses + self._perChildExpense * self._numChildren
+        self._assets =0 # self.getOwnedREValue() + self.getStockValue() + self._savings
         self._liabilities = self._homeMortgage + self._schoolLoans + self._carLoans + self._creditCardDebt
         self._cashBalance = self._salary - self._totalExpenses
         self._passiveIncome = self.getPassiveIncome
@@ -111,7 +110,7 @@ class FinancialStatement:
     def getOwnedREValue(self):
         reValue = 0
         i = 0
-        for i in len(self._realEstate) - 1:
+        for i in range(len(self._realEstate) - 1):
             reValue = self._realEstate[i]
             pricevalue =+ reValue.getPrice
         return reValue
