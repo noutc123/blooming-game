@@ -12,9 +12,9 @@ class Player:
     _hasWon;
     """
 
-    def __init__(self, name: str, dream):
+    def __init__(self, name):
         self._name = name
-        self._dream = dream
+        self._dream = None
         self.prof = Profession.getProfession()
         self._fs = FinancialStatement(self.prof)
 
@@ -22,8 +22,9 @@ class Player:
         self._hasWon = False
         self._charityCount = 0
 
-    def __str__(self):
-        return f" {self._fs.salary}"
+    def show(self):
+        l=[self.prof._getName, self._fs.salary,self._fs.getCashBalance]
+        return
 
     @property
     def get_name(self):
