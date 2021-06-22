@@ -337,7 +337,7 @@ class Ui_MainWindow(object):
         self.boardgame = QtWidgets.QLabel(self.frame_pages)
         self.boardgame.setGeometry(QtCore.QRect(80, 50, 961, 591))
         self.boardgame.setStyleSheet("border-image: url(:/icons/board/hqdefault.jpg);\n"
-"\n"    
+"\n    
 "border-radius:20px;")
         self.player = QtWidgets.QPushButton(self.frame_pages)
         self.player.setGeometry(QtCore.QRect(320, 490, 16, 16))
