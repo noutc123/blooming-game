@@ -337,8 +337,7 @@ class Ui_MainWindow(object):
         self.boardgame = QtWidgets.QLabel(self.frame_pages)
         self.boardgame.setGeometry(QtCore.QRect(80, 50, 961, 591))
         self.boardgame.setStyleSheet("border-image: url(:/icons/board/hqdefault.jpg);\n"
-"\n    
-"border-radius:20px;")
+"\nborder-radius:20px;")
         self.player = QtWidgets.QPushButton(self.frame_pages)
         self.player.setGeometry(QtCore.QRect(320, 490, 16, 16))
         self.player.setStyleSheet("border-radius:200px;\n"
@@ -399,16 +398,17 @@ class Ui_MainWindow(object):
 
     def onload(self):
         play =Player("hello buy dream ",'native')
+        p=play.get_finance
 
-        self.tableWidget.setColumnWidth(0, 150)
-        self.tableWidget.setColumnWidth(1, 150)
-        self.tableWidget_2.setColumnWidth(0, 150)
-        self.tableWidget_2.setColumnWidth(1, 100)
+        self.tableWidget.setColumnWidth(0, 250)
+        self.tableWidget.setColumnWidth(1, 250)
+        self.tableWidget_2.setColumnWidth(0, 250)
+        self.tableWidget_2.setColumnWidth(1, 200)
         self.tableWidget_3.setColumnWidth(0, 250)
         self.tableWidget_3.setColumnWidth(1, 150)
         self.tableWidget_4.setColumnWidth(0, 150)
         self.tableWidget_4.setColumnWidth(1, 150)
-        player=[]
+
 
 
     def retranslateUi(self, MainWindow):
@@ -491,7 +491,7 @@ class Ui_function(Mainwindow):
         """docstring for Ui_function"""
 
         def toggleMenu(self, maxWidth, enable):
-                self.onload()
+
                 if enable:
 
                         # get width
